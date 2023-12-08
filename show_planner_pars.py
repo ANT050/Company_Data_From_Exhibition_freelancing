@@ -116,10 +116,11 @@ def main() -> None:
     url = 'https://n1b.goexposoftware.com/events/ss24/goExpo/exhibitor/listExhibitorProfiles.php'
     headers = {"User-Agent": UserAgent().random}
     number_threads = 10
+    data_file = 'output.csv'
 
     products_info = process_all_links(url, headers, number_threads)
 
-    write_to_csv(products_info, 'output.csv')
+    write_to_csv(products_info, data_file)
 
 
 if __name__ == '__main__':
